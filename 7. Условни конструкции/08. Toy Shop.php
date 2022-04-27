@@ -8,14 +8,21 @@ $numberOfMinions = readline();
 $numberOfTrucks = readline();
 
 $subtotal =
-    $numberOfPuzzles * 2.6 +
-    $numberOfTalkingDolls * 3 +
-    $numberOfTeddyBears * 4.1 +
-    $numberOfMinions * 8.2 +
-    $numberOfTrucks * 2;
+    $numberOfPuzzles * 2.6
+    + $numberOfTalkingDolls * 3
+    + $numberOfTeddyBears * 4.1
+    + $numberOfMinions * 8.2
+    + $numberOfTrucks * 2;
 $subtotalAfterDiscount = 0;
 
-if ($numberOfPuzzles + $numberOfTalkingDolls + $numberOfTeddyBears + $numberOfMinions + $numberOfTrucks >= 50) {
+if (
+    $numberOfPuzzles
+    + $numberOfTalkingDolls
+    + $numberOfTeddyBears
+    + $numberOfMinions
+    + $numberOfTrucks
+    >= 50
+) {
     $subtotalAfterDiscount = $subtotal - $subtotal * 25 / 100;
 } else {
     $subtotalAfterDiscount = $subtotal;
